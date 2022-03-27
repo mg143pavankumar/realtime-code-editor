@@ -1,0 +1,38 @@
+.inputText__container {
+  display: flex;
+  position: relative;
+}
+
+.inputText__container .inputText__label {
+  position: absolute;
+  color: #fff;
+  font-weight: 400;
+  top: 18%;
+  left: 3%;
+  background: #282a36;
+
+  transition: all 0.3s linear;
+  cursor: text;
+}
+
+.inputBox {
+  background-color: transparent;
+  border: 2px solid gray;
+  width: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.inputBox:focus {
+  border-color: #4aee88;
+}
+
+.inputBox:focus ~ .inputText__label,
+.inputBox:not(:placeholder-shown).inputBox:not(:focus) ~ .inputText__label {
+  left: 0.7rem;
+  top: -0.4rem;
+  font-size: 0.8rem;
+  z-index: 10;
+  color: #4aee88;
+}
